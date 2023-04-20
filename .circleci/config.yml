@@ -16,8 +16,8 @@ jobs:
     steps:
       - checkout
       - install_node_13_deb
-      - restore_cache:
-          keys: [frontend-build]
+      # - restore_cache:
+      #     keys: [frontend-build]
       - run:
           name: Build frontend
           command: |
@@ -34,8 +34,8 @@ jobs:
     steps:
       - checkout
       - install_node_13_deb
-      - restore_cache:
-          keys: [backend-build]
+      # - restore_cache:
+      #     keys: [backend-build]
       - run:
           name: Build backend
           command: |
