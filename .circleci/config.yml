@@ -12,7 +12,7 @@ commands:
 jobs:
   build-frontend:
     docker:
-      -image: cimg/base:2022.09-20.04
+      - image: cimg/base:2022.09-20.04
     steps:
       - checkout
       - install_node_13_deb
@@ -30,7 +30,7 @@ jobs:
 
   build-backend:
     docker:
-      -image: cimg/base:2022.09-20.04
+      - image: cimg/base:2022.09-20.04
     steps:
       - checkout
       - install_node_13_deb
