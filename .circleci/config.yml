@@ -2,7 +2,7 @@ version: 2.1
 
 commands:
   install_node_13_deb:
-    description: "Install Node 13 - Ubuntu 20.04"
+    description: "Install Node 13"
     steps:
       - run: sudo apt -y update && sudo apt -y upgrade
       - run: curl -sL https://deb.nodesource.com/setup_13.x | sudo bash -
@@ -12,7 +12,7 @@ commands:
 jobs:
   build-frontend:
     docker:
-      - image: cimg/base:2022.09-20.04
+      - image: cimg/base:2021.05-18.04
     steps:
       - checkout
       - install_node_13_deb
@@ -30,7 +30,7 @@ jobs:
 
   build-backend:
     docker:
-      - image: cimg/base:2022.09-20.04
+      - image: cimg/base:2021.05-18.04
     steps:
       - checkout
       - install_node_13_deb
