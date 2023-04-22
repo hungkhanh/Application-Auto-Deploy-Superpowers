@@ -283,6 +283,8 @@ jobs:
           command: |
             yum update -y
             amazon-linux-extras install ansible2 -y
+      - attach_workspace:
+          at: ~/            
       - run:
           name: Configure environment variable
           command: |
