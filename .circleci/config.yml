@@ -247,10 +247,6 @@ jobs:
       - image: amazon/aws-cli
     steps:
       - checkout
-      - attach_workspace:
-          at: ~/
-      - restore_cache:
-          keys: [frontend-build]      
       - install_tar_gzip
       - install_node_13_rpm
       - run:
@@ -280,10 +276,6 @@ jobs:
       - add_ssh_keys:
           fingerprinters:
             - "d7:95:9e:ed:59:16:ad:23:33:b9:32:b6:19:c3:ce:16"
-      - attach_workspace:
-          at: ~/
-      - restore_cache:
-          keys: [backend-build]
       - install_tar_gzip
       - install_node_13_rpm          
       - run:
