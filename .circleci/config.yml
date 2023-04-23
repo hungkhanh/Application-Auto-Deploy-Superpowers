@@ -223,9 +223,10 @@ jobs:
 
   run-migrations:
     docker:
-      - image: circleci/node:13.8.0
+      - image: amazon/aws-cli
     steps:
       - checkout
+      - install_node_13_rpm
       - run:
           name: Run migrations
           command: |
