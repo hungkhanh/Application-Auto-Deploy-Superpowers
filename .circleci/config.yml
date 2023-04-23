@@ -324,7 +324,7 @@ jobs:
             export BACKEND_DNS=$(aws ec2 describe-instances --query 'Reservations[*].Instances[*].PublicDnsName' --filters "Name=tag:Name,Values=backend-${CIRCLE_WORKFLOW_ID:0:7}" --output text)
             export API_URL="http://${BACKEND_DNS}:3030"
             echo "${API_URL}/api/status"
-            if curl "${API_URL}/api/status" | grep '{"status":"ok","version":"1.0.0","environment":"production"}'
+            if curl --insecure "${API_URL}/api/status" | grep '{"status":"ok","version":"1.0.0","environment":"production"}'
             then
               exit 0
             else
