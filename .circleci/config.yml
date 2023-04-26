@@ -205,7 +205,7 @@ jobs:
       - checkout
       - add_ssh_keys:
           fingerprinters:
-            - "95:7e:1c:5d:70:6b:d1:fe:d2:00:9c:b7:24:60:3f:a5"
+            - "d7:95:9e:ed:59:16:ad:23:33:b9:32:b6:19:c3:ce:16"
       - attach_workspace:
           at: ~/
       - run:
@@ -276,7 +276,7 @@ jobs:
       - checkout
       - add_ssh_keys:
           fingerprinters:
-            - "95:7e:1c:5d:70:6b:d1:fe:d2:00:9c:b7:24:60:3f:a5"
+            - "d7:95:9e:ed:59:16:ad:23:33:b9:32:b6:19:c3:ce:16"
       - install_tar_gzip
       - install_node_13_rpm
       - run:
